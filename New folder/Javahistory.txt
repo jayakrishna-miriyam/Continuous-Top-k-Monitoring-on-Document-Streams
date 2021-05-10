@@ -1,0 +1,1 @@
+Java is a general purpose, high-level programming language developed by Sun Microsystems. A small team of engineers, known as the Green Team, initiated the language in 1991. Java was originally called OAK, and was designed for handheld devices and set-top boxes.Java is also connected to web based applications.

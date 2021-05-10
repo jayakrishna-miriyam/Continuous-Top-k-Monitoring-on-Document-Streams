@@ -1,0 +1,158 @@
+create database cyber;
+
+
+
+use cyber;
+
+
+CREATE TABLE  server (
+  `name` text,
+  `pass` text
+);
+
+INSERT INTO server VALUES ('admin','admin');
+
+
+
+
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL auto_increment,
+  `username` varchar(45) default NULL,
+  `password` varchar(45) default NULL,
+  `email` varchar(45) default NULL,
+  `mobile` varchar(45) default NULL,
+  `address` varchar(45) default NULL,
+  `dob` varchar(45) default NULL,
+  `gender` varchar(45) default NULL,
+  `status` varchar(45) default NULL,
+  `image` longblob,
+  PRIMARY KEY  (`id`)
+);
+
+
+
+CREATE TABLE fsearch(
+id int(11) NOT NULL auto_increment,
+
+ username text,
+
+ keyword text,
+ 
+dt text,
+
+PRIMARY KEY  (id));
+
+
+
+CREATE TABLE `frequest` (
+  `id` int(11) NOT NULL auto_increment,
+  `requestfrom` varchar(45) default NULL,
+  `requestto` varchar(45) default NULL,
+  `dt` varchar(45) default NULL,
+  `status` varchar(45) default NULL,
+  PRIMARY KEY  (`id`)
+);
+
+
+CREATE TABLE filters(
+id int(11) NOT NULL auto_increment,
+
+ category text,
+
+word  text,
+ 
+dt text,
+
+PRIMARY KEY  (id));
+
+
+
+CREATE TABLE posts(
+
+id int(11) NOT NULL auto_increment,
+
+
+user text,
+
+title  text,
+
+uses text,
+description text,
+
+message text,
+
+
+date text,
+image longblob,
+
+PRIMARY KEY  (id)
+
+) ;
+
+
+
+
+CREATE TABLE postcomments(
+
+id int(11) NOT NULL auto_increment,
+
+
+user text,
+
+title  text,
+
+comment text,
+
+
+date text,
+PRIMARY KEY  (id)
+
+) ;
+
+
+
+
+
+
+CREATE TABLE productsearch(
+
+id int(11) NOT NULL auto_increment,
+
+user text,
+
+p_name text,
+
+keyword text,
+
+dt text,
+
+PRIMARY KEY  (id)
+
+) ;
+
+
+
+CREATE TABLE `cybercomments` (
+  `id` int(11) NOT NULL auto_increment,
+  `user` varchar(45) default NULL,
+  `post` varchar(45) default NULL,
+  `comment` text default NULL,
+  `dt`  text,
+
+  PRIMARY KEY  (`id`)
+);
+
+CREATE TABLE `cyberwords` (
+  `id` int(11) NOT NULL auto_increment,
+  `user` varchar(45) default NULL,
+  `post` varchar(45) default NULL,
+  `violence` varchar(45) default NULL,
+  `vulgur` varchar(45) default NULL,
+  `offensive` varchar(45) default NULL,
+  `hate` varchar(45) default NULL,
+  `sexual` varchar(45) default NULL,
+`dt`  text,
+
+  PRIMARY KEY  (`id`)
+);
